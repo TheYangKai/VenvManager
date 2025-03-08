@@ -84,7 +84,7 @@ Bash Shell (Linux, macOS, or WSL on Windows)
 
 ## 💡 Contributions & Issues
 
-Want to improve VenvMaster? Pull requests and issues are welcome!
+Want to improve VenvManager? Pull requests and issues are welcome!
 
 Report bugs → Open an issue
 
