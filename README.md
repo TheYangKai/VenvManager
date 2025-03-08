@@ -15,6 +15,7 @@ With this script, you can:
 
 This tool is ideal for beginners and experienced developers who want a faster and more efficient way to manage their virtual environments.
 
+⚠️ Note: This script is designed for Unix-based systems. If you're using Windows without WSL, you may need to modify it slightly for compatibility.
 
 ---
 
@@ -29,3 +30,44 @@ One-click package installation & uninstallation
 Full control over library updates (Update one or all libraries)
 
 Lightweight & dependency-free (Works with any Bash shell)
+
+---
+📥 Installation & Usage
+
+> there are 2 way to install the script. first 1(Recommended): is that you pick the script from the github and copying it in your System in /home location, beacuse there is the location where all your Venvs exist(if not, move the script where your Venvs are.)
+
+> the second way:
+
+🔹 1. Clone the repository
+
+git clone https://github.com/TheYangKai/VenvManager.git
+cd VenvMaster
+
+🔹 2. Make the script executable
+
+chmod +x venvmaster.sh
+
+🔹 3. Run the script
+
+./venvmaster.sh
+
+---
+
+lets run it :)
+
+![image](https://github.com/user-attachments/assets/e9813d11-511e-4d17-a065-2857392c7847)
+
+here, if you give it an unvalid Venv name (in this case 'a'), the script will stop and telling you "do you want to create a venv with 'a' name?", and you know what to do.
+
+here, i gave it a valid Venv tht is exist in my system, and the script now gave me this :
+
+![image](https://github.com/user-attachments/assets/7c65f356-8dfb-4299-85b5-d0de41eb2eea)
+
+## 📜 Menu Options
+
+| Option  | Description |
+|-------|----------|
+| install a library | enter a package nameand it will install it in the current Venv |
+| Uninstall | Remove a package from the current Venv |
+| View installed libraries | see a sorted list of installed packages in the current Venv |
+| Update a library or the whole venv  | Update a specific library or alloutdated packages in the current Venv |
