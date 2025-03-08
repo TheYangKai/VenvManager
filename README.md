@@ -53,13 +53,13 @@ chmod +x venvmaster.sh
 
 ---
 
-lets run it :)
+## lets run it :)
 
 ![image](https://github.com/user-attachments/assets/e9813d11-511e-4d17-a065-2857392c7847)
 
 here, if you give it an unvalid Venv name (in this case 'a'), the script will stop and telling you "do you want to create a venv with 'a' name?", and you know what to do.
 
-here, i gave it a valid Venv tht is exist in my system, and the script now gave me this :
+here, i gave it a valid Venv that is exist in my system, and the script now gave me these Options :
 
 ![image](https://github.com/user-attachments/assets/7c65f356-8dfb-4299-85b5-d0de41eb2eea)
 
@@ -71,3 +71,21 @@ here, i gave it a valid Venv tht is exist in my system, and the script now gave 
 | Uninstall | Remove a package from the current Venv |
 | View installed libraries | see a sorted list of installed packages in the current Venv |
 | Update a library or the whole venv  | Update a specific library or alloutdated packages in the current Venv |
+
+---
+
+## 🛠 Requirements
+
+Python 3.x (Make sure it's installed)
+
+Bash Shell (Linux, macOS, or WSL on Windows)
+
+---
+
+## 💡 Contributions & Issues
+
+Want to improve VenvMaster? Pull requests and issues are welcome!
+
+Report bugs → Open an issue
+
+Suggest new features → Let’s make this tool even better!
