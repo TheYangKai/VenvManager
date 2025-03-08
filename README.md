@@ -21,8 +21,6 @@ This tool is ideal for beginners and experienced developers who want a faster an
 
 🚀 Features
 
-Auto-detect or create a virtual environment (No more manual venv setup!)
-
 Simple menu-driven interface (No need to remember commands)
 
 One-click package installation & uninstallation
