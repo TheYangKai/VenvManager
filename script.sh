@@ -21,7 +21,7 @@ echo '│                                :####:                                �
 
 
 echo "==========================================="
-echo "     🛠️ Developed by github/YangKai 🛠️"
+echo "     🛠️ Developed by https://github/TheYangKai 🛠️"
 echo "==========================================="
 sleep 2
 
