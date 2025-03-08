@@ -32,9 +32,9 @@ Lightweight & dependency-free (Works with any Bash shell)
 ---
 📥 Installation & Usage
 
-> there are 2 way to install the script. first 1(Recommended): is that you pick the script from the github and copying it in your System in /home location, beacuse there is the location where all your Venvs exist(if not, move the script where your Venvs are.)
+there are 2 way to install the script. first 1(Recommended): is that you pick the script from the this page and copying it in your System in /home location, beacuse there is the location where all your Venvs exist(if not, move the script where your Venvs are.)
 
-> the second way:
+the second way:
 
 🔹 1. Clone the repository
 
