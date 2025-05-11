@@ -67,7 +67,7 @@ here, i gave it a valid Venv that is exist in my system, and the script now gave
 |-------|----------|
 | install a library | enter a package nameand it will install it in the current Venv |
 | Uninstall | Remove a package from the current Venv |
-| View installed libraries | see a sorted list of installed packages in the current Venv |
+| View installed libraries | display a sorted list of installed packages in the current Venv |
 | Update a library or the whole venv  | Update a specific library or alloutdated packages in the current Venv |
 
 ---
