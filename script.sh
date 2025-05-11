@@ -2,29 +2,6 @@
 
 clear
 
-
-echo '│###    ###                               ##   ###               ##    │'
-echo '│.##:  :##.                               ##   ##                ##    │'
-echo '│ ###  ###                                ## :##:                      │'
-echo '│  ##::##    :####    ##.####    :###:##  ##.##:     :####     ####    │'
-echo '│   ####     ######   #######   .#######  #####      ######    ####    │'
-echo '│   ####     #:  :##  ###  :##  ###  ###  #####      #:  :##     ##    │'
-echo '│   :##:      :#####  ##    ##  ##.  .##  #####:      :#####     ##    │'
-echo '│    ##     .#######  ##    ##  ##    ##  ##::##    .#######     ##    │'
-echo '│    ##     ## .  ##  ##    ##  ##.  .##  ##  ##    ## .  ##     ##    │'
-echo '│    ##     ##:  ###  ##    ##  ###  ###  ##  :##   ##:  ###     ##    │'
-echo '│    ##     ########  ##    ##  .#######  ##   ##   ########  ######## │'
-echo '│    ##       ###.##  ##    ##   :###:##  ##   :##    ###.##  ######## │'
-echo '│                                #.  :##                               │'
-echo '│                                ######                                │'
-echo '│                                :####:                                │'
-
-
-echo "==========================================="
-echo "     🛠️ Developed by https://github/TheYangKai 🛠️"
-echo "==========================================="
-sleep 2
-
 while true; do
     read -p "Enter your virtual environment name: " venv_name
     if [ -d "$venv_name" ]; then
@@ -40,7 +17,6 @@ while true; do
 done
 
 source "$venv_name/bin/activate"
-
 clear
 
 while true; do
@@ -49,10 +25,15 @@ while true; do
     echo "2) Uninstall a library"
     echo "3) View installed libraries"
     echo "4) Update a library or the whole venv"
-    echo "5) Exit"
     read -p "Enter your choice: " choice
+    echo "👉 Just hit Enter to exit"
+
+    if [ -z "$choice" ]; then
+        break
+    fi
 
     clear
+    skip_continue=false
 
     case "$choice" in
         1)
@@ -78,8 +59,6 @@ while true; do
         3)
             echo -e "\nInstalled libraries:\n"
             pip list --format=columns | tail -n +3 | sort
-            echo -e "\nPress Enter to continue..."
-            read
             ;;
         4)
             while true; do
@@ -108,6 +87,7 @@ while true; do
                         fi
                         ;;
                     3)
+                        skip_continue=true
                         break
                         ;;
                     *)
@@ -115,26 +95,33 @@ while true; do
                         ;;
                 esac
 
-                echo -e "\nPress Enter to go back."
-                read
-                clear
+                if [ "$update_choice" != "3" ]; then
+                    echo -e "\nPress Enter to go back."
+                    read
+                    clear
+                fi
             done
             ;;
-        5)
-            break
-            ;;
         *)
-            echo "❌ Invalid choice! Please enter a number between 1 and 5."
+            echo "❌ Invalid choice! Please enter a number between 1 and 4 or hit Enter to exit."
             ;;
     esac
 
-    echo -e "\nPress Enter to continue or type 5 to exit."
-    read exit_choice
-    if [ "$exit_choice" == "5" ]; then
-        break
+    if [ "$skip_continue" = false ]; then
+        echo -e "\nPress Enter to continue..."
+        read
     fi
+
     clear
 done
+
+clear
+echo -n "👋 Goodbye"
+for i in {1..3}; do
+    sleep 0.5
+    echo -n "."
+done
+echo -e "\n"
 
 deactivate
 trap "" SIGPIPE
